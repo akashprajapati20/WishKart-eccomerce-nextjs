@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 
-const Mugs = () => {
+const Stickers = () => {
   return (
     <>
       <section className="text-gray-600 body-font justify-center items-center">
@@ -14,7 +14,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -36,7 +36,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -58,7 +58,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -80,7 +80,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -102,7 +102,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -124,7 +124,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -146,7 +146,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -168,7 +168,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -190,7 +190,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -212,7 +212,7 @@ const Mugs = () => {
                   <img
                     alt="ecommerce"
                     className="m-auto  h-[30vh] md:h-[36vh] block"
-                    src="https://m.media-amazon.com/images/I/41G6sIPl5iL._SX300_SY300_QL70_FMwebp_.jpg"
+                    src="https://m.media-amazon.com/images/I/61V216TNC4L._SX300_SY300_QL70_FMwebp_.jpg"
                     />
                 </a>
                 <div className="mt-4 text-center">
@@ -234,4 +234,4 @@ const Mugs = () => {
   );
 }
 
-export default Mugs
+export default Stickers
