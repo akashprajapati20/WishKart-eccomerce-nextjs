@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { AiOutlineShoppingCart,AiOutlineCloseCircle } from 'react-icons/ai';
+import { AiOutlineShoppingCart,AiOutlineCloseCircle,AiFillPlusCircle,AiFillMinusCircle,AiFillMinusSquare,AiFillPlusSquare,AiOutlineClear,AiFillShopping } from 'react-icons/ai';
 import Link from 'next/link';
 import { useRef } from 'react';
 
@@ -41,9 +41,49 @@ else if(!ref.current.classList.contains('translate-x-full')) {
      </h2>
       <span  onClick={toggleCart}  className="cross cursor-pointer absolute top-1 right-1 text-2xl"><AiOutlineCloseCircle/></span>
       <div className="items">
-        <ol>
-          <li><span>Tshirt-wear the code</span></li> 
+        <ol className='list-decimal font-semibold' >
+        <li className="hover:text-black">
+              <div className="item flex my-5">
+               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
+               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
+                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
+              </div> 
+            </li>
+        <li className="hover:text-black">
+              <div className="item flex my-5">
+               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
+               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
+                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
+              </div> 
+            </li>
+        <li className="hover:text-black">
+              <div className="item flex my-5">
+               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
+               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
+                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
+              </div> 
+            </li>
+
+            <li>
+              <div className="item flex ">
+                <div className="w-2/3 font-semibold text-sm">Stickers-marvel new </div>
+                <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
+                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/>
+                </div>
+              </div>
+            </li>
         </ol>
+        <div className="buttons flex my-5">
+        <button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
+          <AiFillShopping className="text-lg mx-1"/>
+          Proceed
+        </button>
+
+        <button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
+         <AiOutlineClear className="text-lg mx-1"/>
+          Clear Cart
+        </button>
+        </div>
       </div>
      </div>
      
