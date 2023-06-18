@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart,AiOutlineCloseCircle,AiFillPlusCircle,AiFillMinus
 import Link from 'next/link';
 import { useRef } from 'react';
 
-const Navbar = () => {
+const Navbar = ({cart,addToCart,removeFromCart,clearCart,setTotal}) => {
   const ref = useRef();
   const toggleCart=()=>{
 if(ref.current.classList.contains('translate-x-full')){
@@ -42,36 +42,18 @@ else if(!ref.current.classList.contains('translate-x-full')) {
       <span  onClick={toggleCart}  className="cross cursor-pointer absolute top-1 right-1 text-2xl"><AiOutlineCloseCircle/></span>
       <div className="items">
         <ol className='list-decimal font-semibold' >
-        <li className="hover:text-black">
-              <div className="item flex my-5">
-               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
-               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
-                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
-              </div> 
-            </li>
-        <li className="hover:text-black">
-              <div className="item flex my-5">
-               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
-               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
-                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
-              </div> 
-            </li>
-        <li className="hover:text-black">
-              <div className="item flex my-5">
-               <div className="w-2/3 font-semibold text-sm">TShirts - wear the code</div>
-               <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
-                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/></div>
-              </div> 
-            </li>
-
-            <li>
-              <div className="item flex ">
-                <div className="w-2/3 font-semibold text-sm">Stickers-marvel new </div>
-                <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
-                <AiFillMinusSquare className="text-pink-500"/> <span className="mx-2">1</span> <AiFillPlusSquare className="text-pink-500"/>
-                </div>
-              </div>
-            </li>
+          {Object.keys(cart).length==0 && 
+          <div>Cart is Empty</div>}
+        {Object.keys(cart).map((k)=>{
+          return <li className="hover:text-black" key={k}>
+          <div className="item flex my-5">
+           <div className="w-2/3 font-semibold text-sm">{cart[k].name}</div>
+           <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
+            <AiFillMinusSquare onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].varient)}} className="text-pink-500"/> <span className="mx-2">{cart[k].qty}</span> <AiFillPlusSquare onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].varient)}} className="text-pink-500"/></div>
+          </div> 
+        </li>
+        })}
+        
         </ol>
         <div className="buttons flex my-5">
         <button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
@@ -79,7 +61,7 @@ else if(!ref.current.classList.contains('translate-x-full')) {
           Proceed
         </button>
 
-        <button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
+        <button type="button" onClick={clearCart} className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
          <AiOutlineClear className="text-lg mx-1"/>
           Clear Cart
         </button>
