@@ -10,7 +10,9 @@ export default function App({ Component, pageProps }) {
 
   useEffect(()=>{
     try {if(localStorage.getItem("cart")){
+      console.log("no error")
       setCart(JSON.parse(localStorage.getItem("cart")))
+      saveCart(JSON.parse(localStorage.getItem("cart")));
       }
     
     } catch (error) {
@@ -63,8 +65,8 @@ let newCart = cart;
   return (
 
   <>
-  <Navbar cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} setTotal={setTotal} />
-  <Component cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} setTotal={setTotal}  {...pageProps} />
+  <Navbar key={total} cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} total={total} />
+  <Component cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} total={total}  {...pageProps} />
   <Footer/>
   </>
   )
