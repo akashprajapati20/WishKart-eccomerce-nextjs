@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { AiOutlineShoppingCart,AiOutlineCloseCircle,AiFillPlusCircle,AiFillMinusCircle,AiFillMinusSquare,AiFillPlusSquare,AiOutlineClear,AiFillShopping } from 'react-icons/ai';
+import {MdAccountCircle} from 'react-icons/md';
 import Link from 'next/link';
 import { useRef } from 'react';
 
@@ -31,8 +32,10 @@ else if(!ref.current.classList.contains('translate-x-full')) {
           
         </ul>
      </div>
-     <div onClick={toggleCart} className="cart absolute right-0 top-4 mx-5">
-     <AiOutlineShoppingCart className='text-3xl cursor-pointer'/> 
+     
+     <div  className="cart flex absolute right-0 top-4 mx-5">
+     <Link href={'/login'}><MdAccountCircle className='text-3xl cursor-pointer'/></Link>
+     <AiOutlineShoppingCart onClick={toggleCart} className='text-3xl cursor-pointer'/> 
      </div>
 
      <div ref={ref}className={`slideCart absolute top-0 right-0 bg-yellow-300 pb-[50%] pl-8 mt-10   transform transition-transform ${Object.keys(cart).length==0?'translate-x-full':'translate-x-0'}`}>

@@ -77,7 +77,7 @@ const Checkout = ({cart,addToCart,removeFromCart,subTotal,total}) => {
       </div>
         <span className="total">Subtotal: ₹{total}</span>
         <div className="buttons flex my-5">
-       <Link href={'/checkout'}><button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
+       <Link href={'/order'}><button type="button" className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  mr-2 mb-2">
           <AiFillShopping className="text-lg mx-1"/>
           Paynow
         </button></Link> 
