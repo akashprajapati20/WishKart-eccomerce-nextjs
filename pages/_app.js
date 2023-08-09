@@ -2,11 +2,15 @@
 import Navbar from '@/components/Navbar'
 import '../styles/globals.css'
 import Footer from '@/components/Footer'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 export default function App({ Component, pageProps }) {
   const [cart,setCart]= useState({});
   const [total,setTotal]= useState(0);
+  const [user,setUser]= useState({value:null});
+  const [key,setKey]= useState(0);
+  const router = useRouter()
 
   useEffect(()=>{
     try {if(localStorage.getItem("cart")){
@@ -20,7 +24,13 @@ export default function App({ Component, pageProps }) {
       localStorage.clear();
     }
     
-  },[])
+    const token= localStorage.getItem('token');
+    if(token){
+      setUser({value:token});
+      setKey(Math.random())
+    }
+  },[router.query])
+  //router.query is se jb bhi url change hoga tb useEffect run hoga
 
   const saveCart=(myCart)=>{
      localStorage.setItem("cart",JSON.stringify(myCart));
@@ -62,10 +72,16 @@ let newCart = cart;
       saveCart(newCart);
     
       }
+      const logout=()=>{
+        
+        localStorage.removeItem('token');
+        setUser({value:null})
+        setKey(Math.random());
+      }
   return (
 
   <>
-  <Navbar key={total} cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} total={total} />
+  <Navbar logout={logout} user={user} key={key} cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} total={total} />
   <Component cart={cart}  removeFromCart={removeFromCart} addToCart={addToCart} clearCart={clearCart} total={total}  {...pageProps} />
   <Footer/>
   </>

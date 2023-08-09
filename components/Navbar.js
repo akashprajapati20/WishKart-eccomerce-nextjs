@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from 'next/image'
 import { AiOutlineShoppingCart,AiOutlineCloseCircle,AiFillPlusCircle,AiFillMinusCircle,AiFillMinusSquare,AiFillPlusSquare,AiOutlineClear,AiFillShopping } from 'react-icons/ai';
 import {MdAccountCircle} from 'react-icons/md';
 import Link from 'next/link';
 import { useRef } from 'react';
+import NavLogo from "../public/logo.jpg"
 
-const Navbar = ({cart,addToCart,removeFromCart,clearCart,total}) => {
+
+const Navbar = ({logout,cart,addToCart,removeFromCart,clearCart,total,user}) => {
   const ref = useRef();
   const toggleCart=()=>{
 if(ref.current.classList.contains('translate-x-full')){
@@ -17,12 +19,15 @@ else if(!ref.current.classList.contains('translate-x-full')) {
   ref.current.classList.add('translate-x-full');
 }
   }
+const [dropdown,setDropdown]=useState(false);
 
   return (
     <div className='flex  flex-col md:flex-row md:justify-start justify-center items-center shadow-md backdrop-brightness-95 sticky top-0 z-10 bg-slate-200 '>
-     <div className="logo mx-5">
-      <Link href={'/'}><Image src="/logo.jpg" width={80} height={90}/> </Link> 
-     </div>
+     <div className="logo mr-auto md:mx-5">
+        <Link href={"/"}>
+          <Image src={NavLogo} width={180} height={25} alt="" />
+        </Link>
+      </div>
      <div className="nav">
         <ul className='flex items-center space-x-2 font-bold'>
           <Link href={"/tshirts"}><li>Tshirts</li>  </Link>
@@ -34,11 +39,27 @@ else if(!ref.current.classList.contains('translate-x-full')) {
      </div>
      
      <div  className="cart flex absolute right-0 top-4 mx-5">
-     <Link href={'/login'}><MdAccountCircle className='text-3xl cursor-pointer'/></Link>
+      <a onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}}>
+      {user.value && <MdAccountCircle onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className='text-3xl cursor-pointer'/> }
+      {dropdown && 
+      <div className='absolute right-7 rounded-md bg-purple-300 top-7 w-36'>
+        <ul className='flex flex-col gap-y-2 px-5'>
+          <li className='hover:text-white cursor-pointer w-full '>My Account</li>
+          <li className='hover:text-white cursor-pointer w-full'>Orders</li>
+          <li className='hover:text-white cursor-pointer w-full'>Contact Us</li>
+          <li onClick={logout} className='hover:text-white cursor-pointer w-full'>Log out</li>
+          
+        </ul>
+      </div>
+     }
+      </a>
+      
+     {!user.value && <Link href={'/login'}> <button className='bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full'>Login</button> </Link>}
      <AiOutlineShoppingCart onClick={toggleCart} className='text-3xl cursor-pointer'/> 
      </div>
+     
 
-     <div ref={ref}className={`slideCart absolute top-0 right-0 bg-yellow-300 pb-[50%] pl-8 mt-10   transform transition-transform ${Object.keys(cart).length==0?'translate-x-full':'translate-x-0'}`}>
+     <div ref={ref}className={`slideCart absolute top-0 overflow-y-scroll right-0 bg-blue-100 pb-[50%] pl-8 mt-10   transform transition-transform ${Object.keys(cart).length==0?'translate-x-full':'translate-x-0'}`}>
      <h2 className="font-bold absolute top-0 justify-center my-5">
         Shopping cart
      </h2>
