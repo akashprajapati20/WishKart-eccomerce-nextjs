@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>WearsCode.com - wear your code</title>
-        <meta name="description" content="WearsCode.com - wear your code" />
+        <title>Wishkart.com - As your wish</title>
+        <meta name="description" content="Wishkart.com - As your wish" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>

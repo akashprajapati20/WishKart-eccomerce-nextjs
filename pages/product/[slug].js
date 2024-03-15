@@ -213,7 +213,7 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                         }}
                         className={`border-2 rounded-full bg-black hover:bg-black w-6 h-6 focus:outline-none ${
                           color === "black"
-                            ? "border-pink-600"
+                            ? "border-purple-600"
                             : "border-gray-300"
                         }`}></button>
                     )}
@@ -229,14 +229,14 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                         }`}></button>
                     )}
 
-                  {Object.keys(variants).includes("pink") &&
-                    Object.keys(variants["pink"]).includes(size) && (
+                  {Object.keys(variants).includes("purple") &&
+                    Object.keys(variants["purple"]).includes(size) && (
                       <button
                         onClick={() => {
-                          refreshVariant(size, "pink");
+                          refreshVariant(size, "purple");
                         }}
-                        className={`border-2 rounded-full bg-pink-700 hover:bg-pink-600 w-6 h-6 focus:outline-none ${
-                          color === "pink" ? "border-black" : "border-gray-300"
+                        className={`border-2 rounded-full bg-purple-700 hover:bg-purple-600 w-6 h-6 focus:outline-none ${
+                          color === "purple" ? "border-black" : "border-gray-300"
                         }`}></button>
                     )}
 
@@ -312,7 +312,7 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                   onClick={() =>
                     buyNow(slug, 1, product.price, product.title, size, color)
                   }
-                  className="flex ml-4 text-white text-sm  border-0 py-2 px-2 focus:outline-none  rounded">
+                  className="flex ml-4 text-white text-sm bg-purple-600 border-0 py-2 px-2 focus:outline-none  rounded">
                   Buy Now
                 </button>
                 <button
@@ -326,7 +326,7 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                       color
                     )
                   }
-                  className="flex ml-2 text-white text-sm  border-0 py-2 px-2 focus:outline-none rounded">
+                  className="flex ml-2 text-white bg-purple-600 text-sm  border-0 py-2 px-2 focus:outline-none rounded">
                   <AiFillShopping className="text-xl mx-1 hidden md:flex" /> Add
                   to Cart
                 </button>
@@ -351,7 +351,7 @@ const Post = ({ buyNow, addToCart, product, variants }) => {
                 />
                 <button
                   onClick={checkServiceability}
-                  className="flex ml-4 text-white bg-pink-500 text-sm  border-0 py-2 px-2 focus:outline-none  rounded">
+                  className="flex ml-4 text-white bg-purple-500 text-sm  border-0 py-2 px-2 focus:outline-none  rounded">
                   Pin Code
                 </button>
               </div>

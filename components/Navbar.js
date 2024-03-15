@@ -48,22 +48,22 @@ const Navbar = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
         </ul>
       </div>
       {/* //todo cart */}
-      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-pink-500 hover:text-pink-600 cursor-pointer">
+      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-purple-500 hover:text-purple-600 cursor-pointer">
         <Link href={'/login'}><MdAccountCircle className="mx-2"/></Link>
       
         <span className="relative inline-flex " onClick={toggleCart}>
         <AiOutlineShoppingCart className="" />
-        {/* <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-pink-50 rounded-full -top-2 -right-2 ">{Object.keys(cart).qty}</div> */}
+        {/* <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-purple-50 rounded-full -top-2 -right-2 ">{Object.keys(cart).qty}</div> */}
         </span>
       </div>
 
       <div
         ref={ref}
-        className={`h-screen sidebar absolute overflow-y-scroll right-0 top-0 p-10 bg-pink-50 z-10 backdrop-filter backdrop-blur-lg shadow-xl ring-1 ring-gray-900/5 transform transition-transform ${Object.keys(cart).length === 0? 'translate-x-full':'translate-x-0'} z-10`}>
+        className={`h-screen sidebar absolute overflow-y-scroll right-0 top-0 p-10 bg-purple-50 z-10 backdrop-filter backdrop-blur-lg shadow-xl ring-1 ring-gray-900/5 transform transition-transform ${Object.keys(cart).length === 0? 'translate-x-full':'translate-x-0'} z-10`}>
         <h2 className="text-xl font-bold text-center">Shopping Cart</h2>
         <span
           onClick={toggleCart}
-          className="absolute top-5 right-2  cursor-pointer text-pink-500 text-2xl">
+          className="absolute top-5 right-2  cursor-pointer text-purple-500 text-2xl">
           <AiFillCloseCircle />
         </span>
         <ol className="list-decimal">
@@ -89,7 +89,7 @@ const Navbar = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
                           cart[k].variant
                         );
                       }}
-                      className="text-pink-500"
+                      className="text-purple-500"
                     />
                     <span className="mx-2">{cart[k].qty}</span>
                     <AiFillPlusSquare
@@ -103,7 +103,7 @@ const Navbar = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
                           cart[k].variant
                         );
                       }}
-                      className="text-pink-500"
+                      className="text-purple-500"
                     />
                   </div>
                 </div>
@@ -116,14 +116,14 @@ const Navbar = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
           <Link href={'/checkout'}><button
             // onClick={() => clearCart}
             type="button"
-            className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2 text-center inline-flex items-center  mr-2 mb-2">
+            className="text-white bg-purple-500 hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2 text-center inline-flex items-center  mr-2 mb-2">
             <AiFillShopping className="text-lg mx-1" />
             Proceed
           </button></Link>
           <button
             onClick={clearCart}
             type="button"
-            className="text-white bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2 text-center inline-flex items-center  mr-2 mb-2">
+            className="text-white bg-purple-500 hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2 text-center inline-flex items-center  mr-2 mb-2">
            
             Clear Cart
           </button>

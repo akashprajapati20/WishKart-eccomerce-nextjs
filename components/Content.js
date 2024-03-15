@@ -3,12 +3,12 @@ import React from 'react'
 const Content = () => {
   return (
     <div>
-        <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
+        <section className="text-gray-600 body-font ">
+  <div className="container px-5 py-10 mx-auto">
     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-      Wear the Code With
-        <span className='text-pink-600 font-bold -translate-x-8 text-4xl font-serif'> - CodesWear.com</span>
+      Wear what you wish
+        <span className='text-purple-600 font-bold -translate-x-8 text-4xl font-serif'> - Wishkart.com</span>
          </h1>
       <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">Wear Whatever You Want. cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
     </div>
@@ -20,8 +20,8 @@ const Content = () => {
               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Grocery</h2>
+          <p className="leading-relaxed text-base">All fresh and new stock grocery.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -33,8 +33,8 @@ const Content = () => {
               <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">The Mobiles</h2>
+          <p className="leading-relaxed text-base">Get all newly launced mobiles here.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -45,8 +45,8 @@ const Content = () => {
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Neptune</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Tshirts</h2>
+          <p className="leading-relaxed text-base">Most stylish tshirts at your door.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -56,8 +56,8 @@ const Content = () => {
               <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Melanchole</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Hoodies</h2>
+          <p className="leading-relaxed text-base">here's your dream hoodie to save you from cold.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -67,8 +67,8 @@ const Content = () => {
               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Bunker</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Home & Furniture</h2>
+          <p className="leading-relaxed text-base">All your desired furniture.</p>
         </div>
       </div>
       <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -78,13 +78,12 @@ const Content = () => {
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
           </div>
-          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Ramona Falls</h2>
-          <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Beauty products</h2>
+          <p className="leading-relaxed text-base">best quality beauty products.</p>
         </div>
       </div>
     </div>
-    <button className="flex mx-auto mt-16 bg-pink-500 text-white  border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">Button</button>
-  </div>
+    </div>
 </section>
     </div>
   )

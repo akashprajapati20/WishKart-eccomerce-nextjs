@@ -12,7 +12,7 @@ const Tshirts = ({ products }) => {
         <div className=" px-5  mx-auto">
           {Object.keys(products).length === 0 && (
             <h6 className="text-center font-normal h-[50vh]">
-              Sorry! No hoodies available. Stay Tuned with us for new
+              Sorry! No tshirts available. Stay Tuned with us for new
               collection.
             </h6>
           )}
@@ -41,7 +41,7 @@ const Tshirts = ({ products }) => {
                         {products[item].title}
                       </h2>
                       <p className="mt-1 text-blue-500">
-                        ৳{products[item].price}
+                      ₹{products[item].price}
                       </p>
                       <p className="mt-1 text-gray-600 text-sm space-x-1">
                         {products[item].size.includes("S") && (
@@ -103,10 +103,10 @@ const Tshirts = ({ products }) => {
 
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readystate) {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect("mongodb://0.0.0.0:27017/wishcartsite");
   }
 
-  let products = await Product.find({ category: "T-Shirt" });
+  let products = await Product.find({ category: "tshirts" });
   let tshirts = {};
   for (let item of products) {
     if (item.title in tshirts) {

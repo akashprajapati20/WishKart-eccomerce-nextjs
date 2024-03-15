@@ -103,7 +103,7 @@ const Login = () => {
               Or
               <Link
                 href={"/signup"}
-                className="font-medium text-pink-600 hover:text-pink-500 mx-2">
+                className="font-medium text-purple-600 hover:text-purple-500 mx-2">
                  Sign Up
               </Link>
             </p>
@@ -124,7 +124,7 @@ const Login = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-pink-500 focus:outline-none focus:ring-pink-500 sm:text-sm"
+                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-purple-500 focus:outline-none focus:ring-purple-500 sm:text-sm"
                   placeholder="Email address"
                 />
               </div>
@@ -140,7 +140,7 @@ const Login = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-pink-500 focus:outline-none focus:ring-pink-500 sm:text-sm"
+                  className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-purple-500 focus:outline-none focus:ring-purple-500 sm:text-sm"
                   placeholder="Password"
                 />
               </div>
@@ -153,7 +153,7 @@ const Login = () => {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-pink-600 focus:ring-pink-500"
+                  className="h-4 w-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                 />
                 <label
                   htmlFor="remember-me"
@@ -165,7 +165,7 @@ const Login = () => {
               <div className="text-sm">
                 <Link
                   href="/forgot"
-                  className="font-medium text-pink-600 hover:text-pink-500">
+                  className="font-medium text-purple-600 hover:text-purple-500">
                   Forgot your password?
                 </Link>
               </div>
@@ -174,7 +174,7 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="group relative flex w-full justify-center rounded-md border border-transparent bg-pink-600 py-2 px-4 text-sm font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
+                className="group relative flex w-full justify-center rounded-md border border-transparent bg-purple-600 py-2 px-4 text-sm font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                 
                 Sign in
               </button>

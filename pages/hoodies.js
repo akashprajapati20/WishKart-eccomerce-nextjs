@@ -41,7 +41,7 @@ const Hoodies = ({ products }) => {
                         {products[item].title}
                       </h2>
                       <p className="mt-1 text-blue-500">
-                        ৳{products[item].price}
+                        ${products[item].price}
                       </p>
                       <p className="mt-1 text-gray-600 text-sm space-x-1">
                         {products[item].size.includes("S") && (
@@ -103,10 +103,10 @@ const Hoodies = ({ products }) => {
 
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readystate) {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect("mongodb://0.0.0.0:27017/wishcartsite");
   }
 
-  let products = await Product.find({ category: "hoodies" });
+  let products = await Product.find({ category: "hoodie" });
   let hoodies = {};
   for (let item of products) {
     if (item.title in hoodies) {
